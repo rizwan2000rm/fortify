@@ -1,8 +1,15 @@
 const demo = ({ passwords }) => {
-  // console.log(passwords );
   return (
     <div>
-      <h1>Demo Page</h1>
+      {passwords.map((password) => {
+        return (
+          <div className="card">
+            <h1>{password.username}</h1>
+            <h1>{password.password}</h1>
+            <h1>{password.url}</h1>
+          </div>
+        );
+      })}
     </div>
   );
 };
