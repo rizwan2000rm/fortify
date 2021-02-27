@@ -9,18 +9,12 @@ router.get("/passwords", passwordController.getAllPasswords);
 router.post("/passwords", passwordController.createNewPassword);
 
 // Get a specific password
-router.get("/passwords/:id", (req, res) => {
-  res.send("Yayyy");
-});
+router.get("/passwords/:id", passwordController.getPasswordById);
 
 // Delete a specific password
-router.delete("/passwords/:id", (req, res) => {
-  res.send("Yayyy");
-});
+router.delete("/passwords/:id", passwordController.deletePasswordById);
 
 // Update a specific password
-router.put("/passwords/:id", (req, res) => {
-  res.send("Yayyy");
-});
+router.put("/passwords/:id", passwordController.updatePasswordById);
 
 module.exports = router;
