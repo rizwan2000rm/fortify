@@ -6,7 +6,7 @@ const Hero = () => {
           <img
             class="object-cover object-center rounded"
             alt="hero"
-            src="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1488&q=80"
+            src="/hero-image.webp"
           />
         </div>
         <div class="lg:w-1/2 md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">

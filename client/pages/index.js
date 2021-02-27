@@ -1,5 +1,3 @@
-import Head from "next/head";
-
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Feature from "../components/Feature";
@@ -9,19 +7,11 @@ import Footer from "../components/Footer";
 const Home = () => {
   return (
     <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <Navbar />
-
-      <main>
-        <Hero />
-        <Feature />
-        <Stats />
-        <Footer />
-      </main>
+      <Hero />
+      <Feature />
+      <Stats />
+      <Footer />
     </div>
   );
 };
