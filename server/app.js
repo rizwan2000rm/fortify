@@ -3,7 +3,7 @@ require("dotenv").config();
 
 const express = require("express"),
   app = express(),
-  PORT = process.env.PORT,
+  PORT = 3002,
   cors = require("cors"),
   passwordRoutes = require("./routes/PasswordRouter");
 

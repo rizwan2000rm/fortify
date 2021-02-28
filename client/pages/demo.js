@@ -1,16 +1,29 @@
+import { useState } from "react";
+
+import Header from "../components/Header";
+import Sidebar from "../components/Sidebar";
+import PasswordContainer from "../components/PasswordContainer";
+
 const demo = ({ passwords }) => {
+  const passwordsArray = Object.values(passwords);
+  const [activeId, setActiveId] = useState(2);
+
+  const openPasswordContainer = (password) => {
+    setActiveId(password.id);
+  };
+
   return (
-    <div>
-      {passwords.map((password) => {
-        return (
-          <div className="card">
-            <h1>{password.username}</h1>
-            <h1>{password.password}</h1>
-            <h1>{password.url}</h1>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <Header />
+      <div className="h-screen flex">
+        <Sidebar
+          passwords={passwordsArray}
+          activeId={activeId}
+          openPasswordContainer={openPasswordContainer}
+        />
+        <PasswordContainer activeId={activeId} />
+      </div>
+    </>
   );
 };
 
